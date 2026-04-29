@@ -1,0 +1,39 @@
+name: software_engineer
+
+keywords:
+  - software engineer
+  - backend
+  - full stack
+  - fullstack
+  - sde
+  - node.js
+  - python
+  - java
+  - golang
+  - system design
+  - microservices
+  - REST API
+  - cloud
+  - AWS
+  - docker
+  - kubernetes
+
+titlePatterns:
+  - "software engineer"
+  - "sde"
+  - "software developer"
+  - "backend engineer"
+  - "full stack engineer"
+  - "fullstack engineer"
+  - "platform engineer"
+
+rejectKeywords:
+  - "10+ years"
+  - "principal"
+  - "staff engineer"
+  - "vp of engineering"
+  - "embedded"
+  - "firmware"
+  - ".NET only"
+
+baseResumePath: "resumes/software_engineer_base.pdf"

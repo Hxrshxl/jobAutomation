@@ -1,0 +1,38 @@
+name: general_developer
+
+keywords:
+  - developer
+  - software
+  - programming
+  - coding
+  - javascript
+  - typescript
+  - python
+  - node.js
+  - git
+  - agile
+  - REST
+  - API
+  - problem solving
+
+titlePatterns:
+  - "software developer"
+  - "developer"
+  - "programmer"
+  - "engineer"
+  - "associate engineer"
+  - "junior developer"
+  - "graduate developer"
+
+rejectKeywords:
+  - "10+ years"
+  - "principal"
+  - "staff engineer"
+  - "vp"
+  - "director"
+  - "embedded"
+  - "firmware"
+  - "data scientist"
+  - "machine learning engineer"
+
+baseResumePath: "resumes/general_developer_base.pdf"

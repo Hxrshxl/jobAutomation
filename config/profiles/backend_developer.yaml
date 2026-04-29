@@ -1,0 +1,42 @@
+name: backend_developer
+
+keywords:
+  - backend
+  - back-end
+  - node.js
+  - express
+  - fastify
+  - python
+  - django
+  - flask
+  - java
+  - spring boot
+  - golang
+  - REST API
+  - GraphQL
+  - database
+  - PostgreSQL
+  - MongoDB
+  - Redis
+  - kafka
+  - microservices
+
+titlePatterns:
+  - "backend developer"
+  - "back-end developer"
+  - "backend engineer"
+  - "api developer"
+  - "server-side developer"
+  - "node.js developer"
+  - "python developer"
+
+rejectKeywords:
+  - "frontend only"
+  - "ui/ux"
+  - "mobile only"
+  - "10+ years"
+  - "principal"
+  - "staff engineer"
+  - "embedded"
+
+baseResumePath: "resumes/backend_developer_base.pdf"

@@ -1,0 +1,37 @@
+name: frontend_developer
+
+keywords:
+  - frontend
+  - front-end
+  - react
+  - next.js
+  - vue
+  - angular
+  - typescript
+  - javascript
+  - html
+  - css
+  - tailwind
+  - ui developer
+  - web developer
+  - component library
+  - performance optimization
+
+titlePatterns:
+  - "frontend developer"
+  - "front-end developer"
+  - "ui developer"
+  - "react developer"
+  - "web developer"
+  - "frontend engineer"
+
+rejectKeywords:
+  - "mobile only"
+  - "ios"
+  - "android"
+  - "backend only"
+  - "10+ years"
+  - "principal"
+  - "flash"
+
+baseResumePath: "resumes/frontend_developer_base.pdf"
