@@ -274,6 +274,13 @@ export async function runPipeline(profile: Profile): Promise<PipelineSummary> {
     scoredJobs = await scoreJobs(newJobs, profile);
     summary.scored = scoredJobs.length;
     log('info', 'scoreJobs', `Scored ${scoredJobs.length} jobs`);
+    
+    // Mark processed RawJobs as seen
+    const jobIds = scoredJobs.map(j => j.jobId);
+    if (jobIds.length > 0) {
+      await RawJob.updateMany({ jobId: { $in: jobIds } }, { $set: { seen: true } });
+      log('info', 'scoreJobs', `Marked ${jobIds.length} jobs as seen`);
+    }
   } catch (err) {
     log('error', 'scoreJobs', 'Scoring failed', { err: String(err) });
     summary.durationMs = Date.now() - start;

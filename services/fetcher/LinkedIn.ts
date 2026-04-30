@@ -11,7 +11,8 @@ export class LinkedInFetcher extends BaseFetcher {
     try {
       const page = await browser.newPage();
       
-      const keywords = encodeURIComponent(profile.keywords.join(' '));
+      // Use the first few keywords to avoid a search query that is too specific, or encode properly
+      const keywords = encodeURIComponent(profile.keywords.slice(0, 2).join(' '));
       const searchUrl = `https://www.linkedin.com/jobs/search/?keywords=${keywords}&f_E=1`;
       
       console.log(`[LinkedIn] Navigating to ${searchUrl}`);
