@@ -18,10 +18,12 @@ export default function PipelineButton({ onComplete }: { onComplete?: () => void
       });
       const data = await res.json();
       if (res.ok) {
-        setResult('Success: ' + data.results.length + ' profiles processed.');
+        setResult(data.message + (data.results ? ' - ' + data.results.length + ' profiles processed.' : ''));
         if (onComplete) onComplete();
+      } else if (res.status === 409) {
+        setResult('Pipeline already running (Started at ' + new Date(data.startedAt).toLocaleTimeString() + ')');
       } else {
-        setResult('Error: ' + data.error);
+        setResult('Error: ' + (data.error || data.message));
       }
     } catch (err: any) {
       setResult('Failed to run: ' + err.message);

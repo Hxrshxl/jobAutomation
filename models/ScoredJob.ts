@@ -22,6 +22,7 @@ export interface IScoredJob extends Document {
   recruiter: string;
   fetchedAt: Date;
   seen: boolean;
+  scoringMode: 'full' | 'title-only';
   // --- ScoredJob-specific fields ---
   score: number;
   scoreBreakdown: IScoreBreakdown;
@@ -43,6 +44,7 @@ const ScoredJobSchema = new Schema<IScoredJob>(
     recruiter:      { type: String, default: '' },
     fetchedAt:      { type: Date,   default: Date.now },
     seen:           { type: Boolean, default: false },
+    scoringMode:    { type: String, enum: ['full', 'title-only'], default: 'full' },
     score:          { type: Number, required: true, min: 0, max: 100 },
     scoreBreakdown: { type: Schema.Types.Mixed, default: {} },
     profile:        { type: String, required: true },
